@@ -1,0 +1,22 @@
+Regresiones lineales
+
+
+1. Crear un dataset sintetico de manera aleatoria con el valor de 1000datos. llenar los datos a una lista
+con 10mil datos
+2. llenar una lista 
+3. con datos relacionados aal fenomeno a estudiar
+
+aplicando la ecuacion y=a+bx
+
+L[l1, l2]
+i2[i1, i3] 
+
+y=a+bx
+
+de manera aleatoria
+
+Desarrollar un algoritmo que prediga un valor y pedir de un numero valor x 
+
+
+
+

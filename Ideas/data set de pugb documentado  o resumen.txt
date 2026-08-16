@@ -1,0 +1,88 @@
+Caso de Estudio: Análisis Predictivo de Supervivencia en PUBG
+1. Presentación del Proyecto
+Nombre del Estudiante: Carlo Daniel Kevin Apaza Villca
+
+Nombre del Dataset: Predicción de la Posición Final mediante Estadísticas en Partidas de PUBG
+
+Objetivo: Aplicar regresión multivariable para predecir el éxito de un jugador basado en su rendimiento durante la partida.
+
+2. Descripción del Dataset
+Este conjunto de datos contiene el rastreo de datos reales e históricos de partidas de PUBG (PlayerUnknown's Battlegrounds), abarcando modalidades en solitario, dúos y escuadrones con hasta 100 agentes por sesión. Cuenta con más de un millón de filas (volumen que se alcanza al recopilar datos anónimos de más de 65.000 partidas, ya que al terminar cada sesión el servidor genera una fila individual con las estadísticas de cada agente). Estas estadísticas se desglosan en 29 columnas (características) que miden acciones detalladas como curaciones usadas, distancia recorrida, daño infligido y armas recogidas. En la materia de Inteligencia Artificial, esto se utilizará para aplicar regresión multivariable y predecir en qué puesto final terminará un agente (en una escala continua de 1.0 para el ganador a 0.0 para el último lugar) en función de dichas estadísticas.
+
+3. Anatomía del Dataset: ¿Cómo se organiza la información?
+Las Columnas (n características): Son las variables o atributos (kills, daño, distancia caminada, etc.) que alimentan nuestro modelo.
+
+Las Filas (m ejemplos): Cada fila es un registro individual, es decir, la partida de un solo jugador.
+
+Ejemplos de análisis por perfil:
+
+Perfil Pasivo: 0 kills, poco daño, poca distancia. Resultado: 0.44 (44% de supervivencia).
+
+Perfil "Tryhard": 4 kills, alto daño, 2.5 km recorridos. Resultado: 0.95 (95% de supervivencia).
+
+Perfil Inactivo/Eliminado rápido: Todo en cero. Resultado: 0.0 (Último lugar).
+
+4. La Variable Objetivo: La Escala Continua (0 a 1)
+Una de las mayores fortalezas de este dataset es su variable objetivo (winPlacePerc). En lugar de usar números enteros (puestos 1, 2, 3...), utiliza un porcentaje o percentil.
+
+0.0 (El peor): Sobrevivió al 0% de los jugadores.
+
+1.0 (El ganador): Sobrevivió al 100% de sus oponentes.
+
+Por qué importa: A los algoritmos de regresión multivariable les resulta mucho más fácil y preciso predecir un decimal continuo que un ranking entero.
+
+5. ¿Por qué es una "Mina de Oro" académica?
+A diferencia de otros juegos, este dataset es un "unicornio" en la ciencia de datos por tres razones:
+
+Acceso oficial: PUBG Corporation y Kaggle lanzaron este dataset para un concurso mundial, liberando datos oficiales que normalmente serían secreto industrial.
+
+El monopolio de los datos: Empresas como Epic Games (Fortnite) o Garena (Free Fire) protegen su telemetría porque sus fórmulas de emparejamiento son su ventaja competitiva.
+
+Calidad vs. Cantidad: Mientras otros juegos tienen datasets pequeños hechos a mano, este cuenta con más de 65.000 partidas, cumpliendo con creces cualquier requisito de volumen de datos.
+
+6. Universalidad: El algoritmo no juega, aprende
+Aunque lo aplicamos a PUBG, el modelo es universal para cualquier juego competitivo. Si quisiéramos cambiar de juego, el algoritmo de regresión multivariable aprendería de la misma forma, solo cambiarían los nombres de las columnas. El modelo no necesita "entender" qué es un videojuego; simplemente analiza qué acciones tienen más peso matemático para asegurar el éxito, buscando patrones ocultos en millones de filas de datos.
+
+7. Consideraciones Técnicas para el Modelo
+Hipótesis: Se espera que las variables de movimiento (como walkDistance) y supervivencia (como heals y boosts) tengan una correlación más fuerte con la victoria que las variables de combate agresivo (como kills).
+
+Preprocesamiento: Antes de entrenar, se identificarán datos atípicos (outliers) para evitar que valores erróneos sesguen el aprendizaje.
+
+Evaluación: El éxito se medirá mediante el Error Absoluto Medio (MAE), indicando qué tan cerca está nuestra predicción del percentil real del jugador.
+
+
+
+
+
+
+
+------------------------------------------------------
+1. ¿Estás en desventaja por usar un videojuego?
+La respuesta corta es: Rotundamente no. De hecho, en la industria de la Inteligencia Artificial y la Ciencia de Datos, los videojuegos son considerados uno de los campos de entrenamiento más complejos y respetados. ¿Por qué?
+
+Complejidad de los datos: Un dataset como el de PUBG tiene más variables y "ruido" (datos inútiles o errores) que un dataset de "Precios de casas" o "Retrasos de vuelos". Limpiar y entrenar un modelo con millones de filas de telemetría de PUBG te dará más destreza técnica que limpiar un dataset estático de ventas.
+
+Transferibilidad: Como bien concluimos antes, el modelo es universal. Si mañana una empresa te contrata para predecir el "abandono de clientes" (churn) en una app de delivery, el proceso lógico (preprocesamiento, limpieza de datos, selección de características, entrenamiento del modelo) es idéntico al que habrás hecho con PUBG.
+
+2. ¿Es "menos visto" en la vida real?
+Aquí hay un matiz. Es cierto que hay más empresas buscando predecir precios de inmuebles que empresas haciendo juegos AAA. Pero, ¿sabes qué es lo más difícil de conseguir? Datasets masivos y de alta calidad.
+
+Tus compañeros están aprendiendo a aplicar el modelo, y eso es genial.
+
+Pero tú, al trabajar con un dataset de este nivel, estás aprendiendo a manejar Big Data. Muchos de tus compañeros, al elegir datasets pequeños o simples, van a saltarse el dolor de cabeza de tener que optimizar sus algoritmos para que no se cuelguen con millones de registros. Tú vas a sufrir más programando, sí, pero aprenderás a resolver problemas de rendimiento que ellos ni verán en este semestre.
+
+3. ¿Qué aprendes tú que ellos no?
+Mientras ellos hacen sus modelos, tú estarás desarrollando habilidades que los reclutadores buscan desesperadamente:
+
+Manejo de grandes volúmenes de datos: Sabrás qué hacer cuando los datos no caben en una simple tabla de Excel.
+
+Feature Engineering: Aprenderás a identificar qué variables realmente importan (¿sirve más caminar o matar?) en un entorno dinámico.
+
+Pensamiento analítico: Estarás entrenado para encontrar patrones en comportamientos humanos complejos (estrategias de juego), no solo en tablas de precios.
+
+4. ¿Qué deberías hacer para sentirte seguro?
+Si quieres que tu perfil sea brillante ante el ingeniero y a futuro en tu carrera, no presentes esto solo como "un juego". Preséntalo como lo que es: un modelo de optimización de comportamiento humano en entornos masivos.
+
+Si el ingeniero te pregunta por qué no elegiste "Precios de vivienda", puedes responderle con total seguridad:
+
+"Elegí este dataset porque, a diferencia de los modelos de regresión estáticos tradicionales, este me permite enfrentarme a un problema de alta dimensionalidad y gran volumen de datos (Big Data). Quería desafiarme a optimizar un modelo que procese telemetría masiva, lo cual es la base técnica para cualquier sistema de predicción en tiempo real, ya sea en videojuegos o en logística de entrega de última milla."

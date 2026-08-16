@@ -1,0 +1,61 @@
+25 DE FEBRERO 2026
+
+LABORATORIO MIERCOLES 11 A 13PM
+
+Todo es inferencia, 3 tipos de aprendizaje:
+
+1. Supervisado
+2. No Supervisado
+3. Por refuerzo	--> regresion lineal
+
+
+contruir un modelo de datos que existen.
+
+----------------------------------
+TECNOLOGIA BASICA MACHINE LEARNING
+----------------------------------
+
+---------------------------
+| x1 	| y2	| ... | xn	| y 	|			etiquetas o labels
+|----	|----	|-----|---	|----	|
+|	|	|	 |	|	|			
+|	|	|	 |	|	|
+|	|	|	 |	|	|
+|	|	|	 |	|	|
+|	|	|	 |	|	|
+|	|	|	 |	|	|
+|	|	|	 |	|	|
+|	|	|	 |	|	|
+|	|	|	 |	|	|
+|	|	|	 |	|	|
+			
+			
+parametros de modelo. muchos usan modelos matematicos conocidos vistos en calculo o algebra.
+
+	importante repasar regresiones 
+	
+para encontrar una RELACION entre dos variables:
+
+
+ejemplo
+
+CONJUNTO DE DATOS ENTRENADOS
+
+tamanio en pies (elevado al cuadrado) (x) | precios ($) en 1000`s (y) 
+
+
+----- FUNCION DE COSTO ( J ) ----------
+
+
+en codigio ya ( lo demas en el cuarderno) 
+
+en COlab
+X = np.stack([np.ones(m), X], axis=1) ----> axis=0 --> filas ---> axis=1 ---> columnas
+ 
+
+
+
+
+
+
+

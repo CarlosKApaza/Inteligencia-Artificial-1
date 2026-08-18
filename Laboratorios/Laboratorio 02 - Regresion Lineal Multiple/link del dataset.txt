@@ -1,0 +1,10 @@
+Dataset: Steam Games Dataset 2025
+Link oficial (Kaggle): https://www.kaggle.com/datasets/artermiloff/steam-games-dataset
+
+
+
+
+Nota para la revisión del Laboratorio 02:
+Debido a que el dataset completo pesa más de 450 MB, excede los límites de almacenamiento de GitHub y de la plataforma eCampus. 
+
+Para ejecutar el cuaderno de Google Colab adjunto, por favor descargar el dataset desde el enlace de Kaggle proporcionado arriba y utilizar específicamente el archivo extraído llamado: "games_march2025_cleaned.csv".

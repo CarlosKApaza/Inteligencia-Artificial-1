@@ -1,0 +1,6 @@
+Este laboratorio corresponde al ejercicio de Regresión Logística realizado y finalizado durante la clase utilizando el dataset Heart Failure Prediction. 
+
+El trabajo fue presentado al docente durante la sesión y se me indicó que, al haber concluido el ejercicio en clase, debía presentar este mismo trabajo como Laboratorio 04. El dataset fue registrado a mi nombre por el docente.
+
+
+

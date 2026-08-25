@@ -1,0 +1,16 @@
+Dataset: Arabic Handwritten Digits Dataset (AHDD)
+
+Debido al tamaño de los archivos, el dataset no se incluye directamente
+en el repositorio.
+
+
+Descarga:
+https://www.kaggle.com/datasets/mloey1/ahdd1?resource=download
+
+
+Archivos utilizados:
+
+- csvTrainImages 60k x 784.csv
+- csvTrainLabel 60k x 1.csv
+- csvTestImages 10k x 784.csv
+- csvTestLabel 10k x 1.csv
